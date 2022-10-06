@@ -37,9 +37,11 @@ with open(filename) as f:
 result = re.findall("\">.*?</d>",data)
 new_data = ""
 for i in result:
-    i = i[2:-10]
+    #print(i)
+    i = i[2:-4]
+    #print(i)
     new_data += i
-print(new_data)
+#print(new_data)
 # 文本分词
 seg_list_exact = jieba.cut(new_data, cut_all=True)
 
@@ -55,13 +57,13 @@ for word in seg_list_exact:
     # 设置停用词并去除单个词
     if word not in stop_words and len(word) > 1:
         result_list.append(word)
-print(result_list)
+#print(result_list)
 
 # 筛选后统计
 word_counts = collections.Counter(result_list)
 # 获取词频靠前的词
-word_counts_top100 = word_counts.most_common(200)
-print(word_counts_top100)
+word_counts_top = word_counts.most_common(200)
+#print(word_counts_top)
 
 # 绘制词云
 my_cloud = WordCloud(
