@@ -20,7 +20,7 @@ use you-get and regular expression create word cloud for bilibili video
     optional arguments:
         -h, --help            show this help message and exit
         -bgc BGC              background color of the word cloud
-        -width WIDTH        width of word cloud
+        -width WIDTH          width of word cloud
         -height HEIGHT        height of the word cloud
         -max_font MAX_FONT    max font size
         -max_word MAX_WORD    max word in word cloud
