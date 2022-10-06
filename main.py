@@ -13,7 +13,7 @@ import argparse
 parser = argparse.ArgumentParser(description="analysing what is discussed when watching this video")
 group = parser.add_mutually_exclusive_group()
 group.add_argument("-bgc",help="background color of the word cloud",default="white",type=str)
-group.add_argument("-weight",help="width of word cloud",default=900,type=int)
+group.add_argument("-width",help="width of word cloud",default=900,type=int)
 group.add_argument("-height",help="height of the word cloud",default=600,type=int)
 group.add_argument('-max_font',help="max font size",default=99,type=int)
 group.add_argument('-max_word',help="max word in word cloud",default=200,type=int)
@@ -69,7 +69,7 @@ word_counts_top = word_counts.most_common(200)
 # 绘制词云
 my_cloud = WordCloud(
     background_color=args.bgc,  # 设置背景颜色  默认是black
-    width=args.weight, height=args.height,
+    width=args.width, height=args.height,
     max_words=args.max_word,            # 词云显示的最大词语数量
     font_path='simhei.ttf',   # 设置字体  显示中文
     max_font_size=args.max_font,         # 设置字体最大值

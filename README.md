@@ -9,7 +9,7 @@ use you-get and regular expression create word cloud for bilibili video
     pip install -r requirements.txt
 ## Usage
     usage: main.py [-h]
-               [-bgc BGC | -weight WEIGHT | -height HEIGHT | -max_font MAX_FONT | -max_word MAX_WORD | -min_font MIN_FONT | -color_state COLOR_STATE | -save_path SAVE_PATH]
+               [-bgc BGC | -width WIDTH | -height HEIGHT | -max_font MAX_FONT | -max_word MAX_WORD | -min_font MIN_FONT | -color_state COLOR_STATE | -save_path SAVE_PATH]
                url
 
     analysing what is discussed when watching this video
@@ -20,7 +20,7 @@ use you-get and regular expression create word cloud for bilibili video
     optional arguments:
         -h, --help            show this help message and exit
         -bgc BGC              background color of the word cloud
-        -weight WEIGHT        width of word cloud
+        -width WIDTH        width of word cloud
         -height HEIGHT        height of the word cloud
         -max_font MAX_FONT    max font size
         -max_word MAX_WORD    max word in word cloud
