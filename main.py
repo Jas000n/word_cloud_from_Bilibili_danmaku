@@ -1,3 +1,4 @@
+import os
 from time import sleep
 
 import jieba
@@ -81,4 +82,4 @@ plt.imshow(my_cloud, interpolation='bilinear')
 # 显示设置词云图中无坐标轴
 plt.axis('off')
 plt.savefig(args.save_path)
-plt.show()
+os.remove(filename)
