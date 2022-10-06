@@ -31,7 +31,7 @@ while(1):
         break
     sleep(0.5)
 data = ""
-with open(filename) as f:
+with open(filename,encoding="UTF-8") as f:
     data += f.readline()
 
 
