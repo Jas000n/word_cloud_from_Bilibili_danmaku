@@ -11,4 +11,3 @@ def _getfiles(dirPath):
             return f
 
 
-_getfiles(".")

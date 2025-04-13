@@ -1,4 +1,4 @@
-you-get
 jieba
 wordcloud
 matplotlib
+requests

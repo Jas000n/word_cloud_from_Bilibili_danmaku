@@ -6,7 +6,7 @@ import collections
 import re
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-from you_get_script import get_video_danmaku
+from download_danmu import download_danmaku
 from matchXML import _getfiles
 import argparse
 
@@ -17,21 +17,21 @@ group.add_argument("-width",help="width of word cloud",default=900,type=int)
 group.add_argument("-height",help="height of the word cloud",default=600,type=int)
 group.add_argument('-max_font',help="max font size",default=99,type=int)
 group.add_argument('-max_word',help="max word in word cloud",default=200,type=int)
-group.add_argument('-min_font',help="min font size",default=16,type=int)
+group.add_argument('-min_font',help="min font size",default=10,type=int)
 group.add_argument('-color_state',help="random color state",default=50,type=int)
 group.add_argument("-save_path",help="save generated image to path",default="./word_cloud.png")
 parser.add_argument("url", help="url of the bilibili video")
 args = parser.parse_args()
 
 #get danmuku file
-get_video_danmaku(args.url)
-while(1):
-    filename = _getfiles(".")
-    if(filename):
-        break
-    sleep(0.5)
+filename = download_danmaku(args.url)
+
 data = ""
-with open(filename,encoding="UTF-8") as f:
+try:
+    with open(filename, encoding="UTF-8") as f:
+        data = f.read()
+except IOError as e:
+    print(f"读取文件 {filename} 失败: {e}")
     data += f.readline()
 
 
