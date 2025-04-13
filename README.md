@@ -4,7 +4,7 @@ crawl danmuku file and use regular expression to create word cloud for bilibili 
 ![](example.jpg)
 ## Installation
     git clone https://github.com/Jas000n/word_cloud_danmaku.git
-    cd word_cloud_danmaku
+    cd word_cloud_from_Bilibili_danmaku
     pip install -r requirements.txt
 ## Usage
     usage: main.py [-h]
