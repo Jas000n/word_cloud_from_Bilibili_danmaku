@@ -7,7 +7,6 @@ import re
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from download_danmu import download_danmaku
-from matchXML import _getfiles
 import argparse
 
 parser = argparse.ArgumentParser(description="analysing what is discussed when watching this video")

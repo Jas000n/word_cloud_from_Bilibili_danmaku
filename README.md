@@ -1,6 +1,5 @@
 # word_cloud_danmaku
-use you-get and regular expression create word cloud for bilibili video
-
+crawl danmuku file and use regular expression to create word cloud for bilibili video
 ## To analyse what is discussed when watching this video
 ![](example.jpg)
 ## Installation
